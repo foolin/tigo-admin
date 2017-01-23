@@ -47,6 +47,6 @@ You should be able to access URLs such as `http://localhost:8080`.
 
 # Links
 
-[Tigo Framework](https://github.com/foolin/tigo "tigo framework")
+* [Tigo Framework](https://github.com/foolin/tigo "tigo framework")
 
-[Lumino Admin Template](http://medialoot.com/item/lumino-admin-bootstrap-template/ "Lumino Admin Template")
+* [Lumino Admin Template](http://medialoot.com/item/lumino-admin-bootstrap-template/ "Lumino Admin Template")
