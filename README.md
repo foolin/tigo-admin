@@ -1,4 +1,4 @@
-# logview
+# Tigo-admin
 
 tigo-admin is a admin template demo with tigo and Lumino, which is a clean, fresh admin panel template built on the Bootstrap framework and available.
 

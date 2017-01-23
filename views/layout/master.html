@@ -17,6 +17,11 @@
     <script src="/static/js/respond.min.js"></script>
     <![endif]-->
 
+    <script src="/static/js/jquery-1.11.1.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/bootstrap-datepicker.js"></script>
+    <script src="/static/js/bootstrap-table.js"></script>
+
     <style>
         .copy{
             position: relative;
@@ -24,6 +29,8 @@
             padding: 10px 15px;
         }
     </style>
+
+    {{template "head" .}}
 
 </head>
 
@@ -104,13 +111,7 @@
 
 {{template "main" .}}
 
-<script src="/static/js/jquery-1.11.1.min.js"></script>
-<script src="/static/js/bootstrap.min.js"></script>
-<script src="/static/js/chart.min.js"></script>
-<script src="/static/js/chart-data.js"></script>
-<script src="/static/js/easypiechart.js"></script>
-<script src="/static/js/easypiechart-data.js"></script>
-<script src="/static/js/bootstrap-datepicker.js"></script>
+
 <script>
 		$('#calendar').datepicker({
 		});

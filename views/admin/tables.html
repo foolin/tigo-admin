@@ -1,3 +1,6 @@
+{{define "head"}}
+{{end}}
+
 {{define "main"}}
 	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">			
 		<div class="row">
@@ -19,7 +22,7 @@
 				<div class="panel panel-default">
 					<div class="panel-heading">Advanced Table</div>
 					<div class="panel-body">
-						<table data-toggle="table" data-url="tables/data1.json"  data-show-refresh="true" data-show-toggle="true" data-show-columns="true" data-search="true" data-select-item-name="toolbar1" data-pagination="true" data-sort-name="name" data-sort-order="desc">
+						<table data-toggle="table" data-url="/static/tables/data1.json"  data-show-refresh="true" data-show-toggle="true" data-show-columns="true" data-search="true" data-select-item-name="toolbar1" data-pagination="true" data-sort-name="name" data-sort-order="desc">
 						    <thead>
 						    <tr>
 						        <th data-field="state" data-checkbox="true" >Item ID</th>
@@ -38,7 +41,7 @@
 				<div class="panel panel-default">
 					<div class="panel-heading">Basic Table</div>
 					<div class="panel-body">
-						<table data-toggle="table" data-url="tables/data2.json" >
+						<table data-toggle="table" data-url="/static/tables/data2.json" >
 						    <thead>
 						    <tr>
 						        <th data-field="id" data-align="right">Item ID</th>
@@ -54,7 +57,7 @@
 				<div class="panel panel-default">
 					<div class="panel-heading">Styled Table</div>
 					<div class="panel-body">
-						<table data-toggle="table" id="table-style" data-url="tables/data2.json" data-row-style="rowStyle">
+						<table data-toggle="table" id="table-style" data-url="/static/tables/data2.json" data-row-style="rowStyle">
 						    <thead>
 						    <tr>
 						        <th data-field="id" data-align="right" >Item ID</th>
