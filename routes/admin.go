@@ -14,8 +14,6 @@ func AdminRoute(ctx *tigo.Context) error {
 		return nil
 	}
 
-
-
 	//admin page
 	id := ctx.Param("id")
 	id = strings.TrimRight(strings.ToLower(id), ".html")
