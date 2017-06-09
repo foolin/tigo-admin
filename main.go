@@ -1,10 +1,10 @@
 package main
 
 import (
-	"github.com/foolin/tigo"
 	"html/template"
 	"log"
 	"github.com/foolin/tigo-admin/routes"
+	"gopkg.in/foolin/tigo.v1"
 )
 
 func main() {

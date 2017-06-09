@@ -1,6 +1,6 @@
 package routes
 
-import "github.com/foolin/tigo"
+import "gopkg.in/foolin/tigo.v1"
 
 func LogoutRoute(ctx *tigo.Context) error {
 	//delete cookie
