@@ -1,16 +1,17 @@
 package routes
 
 import (
-	"gopkg.in/foolin/tigo.v1"
+	"github.com/foolin/tigo"
 	"strings"
 	"fmt"
+	"net/http"
 )
 
 func AdminRoute(ctx *tigo.Context) error {
 	//check login
 	username := ctx.GetCookieValue("username")
 	if username == "" {
-		ctx.Redirect("/login")
+		ctx.Redirect("/login", http.StatusOK)
 		return nil
 	}
 

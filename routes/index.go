@@ -1,8 +1,11 @@
 package routes
 
-import "gopkg.in/foolin/tigo.v1"
+import (
+	"github.com/foolin/tigo"
+	"net/http"
+)
 
 func IndexRoute(ctx *tigo.Context) error {
-	ctx.Redirect("/login")
+	ctx.Redirect("/login", http.StatusOK)
 	return nil
 }

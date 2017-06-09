@@ -1,17 +1,18 @@
 package routes
 
 import (
-	"gopkg.in/foolin/tigo.v1"
+	"github.com/foolin/tigo"
 	"time"
+	"net/http"
 )
 
 func LoginRoute(ctx *tigo.Context) error {
 	//post
 	if ctx.IsPost(){
-		username := ctx.FormString("username")
+		username := ctx.Request.FormValue("username")
 		if username != ""{
 			ctx.SetCookieValue("username", username, time.Now().Add(time.Hour))
-			ctx.Redirect("/admin/index")
+			ctx.Redirect("/admin/index", http.StatusOK)
 			return nil
 		}
 	}

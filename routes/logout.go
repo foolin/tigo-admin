@@ -1,13 +1,16 @@
 package routes
 
-import "gopkg.in/foolin/tigo.v1"
+import (
+	"github.com/foolin/tigo"
+	"net/http"
+)
 
 func LogoutRoute(ctx *tigo.Context) error {
 	//delete cookie
 	ctx.DelCookie("username")
 
 	//jump to login
-	ctx.Redirect("/login")
+	ctx.Redirect("/login", http.StatusOK)
 
 	return nil
 }

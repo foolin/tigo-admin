@@ -4,7 +4,7 @@ import (
 	"html/template"
 	"log"
 	"github.com/foolin/tigo-admin/routes"
-	"gopkg.in/foolin/tigo.v1"
+	"github.com/foolin/tigo"
 )
 
 func main() {
@@ -21,21 +21,13 @@ func main() {
 		DisableFilePartial: false,
 	}))
 
-	router.Get("/static/*", tigo.Static("static/", 1))
+	router.File("/favicon.ico", "static/favicon.ico")
+	router.Static("/static/*", "./static")
 
 	//404
-	router.OnNotFound = func(ctx *tigo.Context) error {
+	router.NotFound(func(ctx *tigo.Context) error {
 		return ctx.RenderFile("404", tigo.M{})
-	}
-	//500
-	router.OnError = func(ctx *tigo.Context, err error) {
-		err = ctx.RenderFile("500", tigo.M{
-			"Msg": err.Error(),
-		})
-		if err != nil {
-			ctx.HTML(err.Error())
-		}
-	}
+	})
 	//routes
 	router.Any("/", routes.IndexRoute)
 	router.Any("/login", routes.LoginRoute)
