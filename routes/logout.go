@@ -1,7 +1,7 @@
 package routes
 
 import (
-	"github.com/foolin/tigo"
+	"gopkg.in/foolin/tigo.v2"
 )
 
 func LogoutRoute(ctx *tigo.Context) error {

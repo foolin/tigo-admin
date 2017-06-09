@@ -4,7 +4,7 @@ import (
 	"html/template"
 	"log"
 	"github.com/foolin/tigo-admin/routes"
-	"github.com/foolin/tigo"
+	"gopkg.in/foolin/tigo.v2"
 )
 
 func main() {
