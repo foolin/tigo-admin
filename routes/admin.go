@@ -4,14 +4,13 @@ import (
 	"github.com/foolin/tigo"
 	"strings"
 	"fmt"
-	"net/http"
 )
 
 func AdminRoute(ctx *tigo.Context) error {
 	//check login
 	username := ctx.GetCookieValue("username")
 	if username == "" {
-		ctx.Redirect("/login", http.StatusOK)
+		ctx.Redirect("/login")
 		return nil
 	}
 

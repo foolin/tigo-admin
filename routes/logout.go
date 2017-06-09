@@ -2,7 +2,6 @@ package routes
 
 import (
 	"github.com/foolin/tigo"
-	"net/http"
 )
 
 func LogoutRoute(ctx *tigo.Context) error {
@@ -10,7 +9,7 @@ func LogoutRoute(ctx *tigo.Context) error {
 	ctx.DelCookie("username")
 
 	//jump to login
-	ctx.Redirect("/login", http.StatusOK)
+	ctx.Redirect("/login")
 
 	return nil
 }

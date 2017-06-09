@@ -3,7 +3,6 @@ package routes
 import (
 	"github.com/foolin/tigo"
 	"time"
-	"net/http"
 )
 
 func LoginRoute(ctx *tigo.Context) error {
@@ -12,7 +11,7 @@ func LoginRoute(ctx *tigo.Context) error {
 		username := ctx.Request.FormValue("username")
 		if username != ""{
 			ctx.SetCookieValue("username", username, time.Now().Add(time.Hour))
-			ctx.Redirect("/admin/index", http.StatusOK)
+			ctx.Redirect("/admin/index")
 			return nil
 		}
 	}
