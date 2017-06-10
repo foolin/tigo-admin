@@ -10,7 +10,7 @@ import (
 func main() {
 	router := tigo.Default()
 
-	router.SetRender(tigo.NewViewRender(tigo.ViewRenderConfig{
+	router.Render = tigo.NewViewRender(tigo.ViewRenderConfig{
 		Root: "views",
 		Extension: ".html",
 		Master: "layout/master",
@@ -19,7 +19,7 @@ func main() {
 		},
 		DisableCache: true, //debug mode, use true
 		DisableFilePartial: false,
-	}))
+	})
 
 	router.File("/favicon.ico", "static/favicon.ico")
 	router.Static("/static/*", "./static")
